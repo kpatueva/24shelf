@@ -1,0 +1,21 @@
+# Настройки для деплоя на Netlify
+
+[build]
+  # Команда для сборки проекта
+  command = "npm run build"
+
+  # Директория с готовыми файлами для публикации
+  publish = "dist"
+
+# Переменные окружения (нужно заполнить в настройках Netlify)
+# Перейдите: Site configuration → Environment variables
+#
+# Добавьте эти переменные:
+# VITE_SUPABASE_URL=https://paoubdkmkldahmgydqrr.supabase.co
+# VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhb3ViZGtta2xkYWhtZ3lkcXJyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA4MDI0MzAsImV4cCI6MjA4NjM3ODQzMH0.2HCLTmZl20kGBo24onWfNK7CM8uRuuykrlzlr7KOsR0
+
+# Настройки для SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
