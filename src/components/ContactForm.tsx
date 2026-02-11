@@ -63,8 +63,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="glass-card p-6 sm:p-8 rounded-3xl depth-shadow max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-5">
+    <div className="glass-card p-6 sm:p-8 rounded-3xl depth-shadow relative overflow-hidden group">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/5 via-transparent to-[#00ffa3]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute -inset-1 bg-gradient-to-br from-[#00e676]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+      <form onSubmit={handleSubmit} className="space-y-5 relative z-10">
               <div className="space-y-2">
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-200">
                   Имя <span className="text-[#00e676]">*</span>

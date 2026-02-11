@@ -156,24 +156,26 @@ function App() {
         </section>
 
         <section id="contact-form" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative scroll-mt-20">
-          <div className="container mx-auto max-w-4xl">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-tight">
-                Запросите демонстрацию 24SHELF
-                <span className="gradient-text block mt-1">сегодня!</span>
-              </h2>
-              <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-light">
-                Оставьте заявку, и наш эксперт свяжется с вами.
-              </p>
-            </div>
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="space-y-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+                  Запросите демонстрацию 24SHELF
+                  <span className="gradient-text block mt-2">сегодня!</span>
+                </h2>
+                <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed font-light">
+                  Оставьте заявку, и наш эксперт свяжется с вами.
+                </p>
+              </div>
 
-            <ContactForm />
+              <ContactForm />
+            </div>
           </div>
         </section>
 
         <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative">
           <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-8 sm:mb-10 px-4">
+            <div className="text-center mb-12 sm:mb-16 px-4">
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
                 24SHELF предоставляет аналитику для quick-commerce, автоматически собирая данные о всех брендах каждые 4 часа.
                 Мы отслеживаем весь ассортимент товаров, включая ваших конкурентов, без необходимости вручную обновлять ассортиментные матрицы.
@@ -234,7 +236,7 @@ function App() {
               ].map((feature, index) => (
                 <div
                   key={index}
-                  className="glass-card p-5 sm:p-6 lg:p-8 rounded-2xl hover:scale-[1.03] transition-all duration-500 feature-card-glow group cursor-pointer relative overflow-hidden"
+                  className="glass-card p-5 sm:p-6 lg:p-8 rounded-2xl hover:scale-[1.05] transition-all duration-500 feature-card-glow group cursor-pointer relative overflow-hidden card-3d animate-fade-in-up opacity-0"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
@@ -291,10 +293,10 @@ function App() {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
-              <div className="glass-card p-6 sm:p-8 lg:p-10 rounded-3xl group hover:scale-[1.03] transition-all duration-500 relative overflow-hidden depth-shadow">
+              <div className="glass-card-enhanced p-6 sm:p-8 lg:p-10 rounded-3xl group hover:scale-[1.05] transition-all duration-500 relative overflow-hidden depth-shadow card-3d animate-fade-in-scale opacity-0 stagger-1">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute -inset-1 bg-gradient-to-br from-[#00e676]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-[#00e676]/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 liquid-blob"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-[#00e676]/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 liquid-blob morph-border"></div>
                 <div className="relative z-10">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center mb-4 sm:mb-6 group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-500 group-hover:rotate-3 group-hover:scale-110 shimmer relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -307,10 +309,10 @@ function App() {
                 </div>
               </div>
 
-              <div className="glass-card p-6 sm:p-8 lg:p-10 rounded-3xl group hover:scale-[1.03] transition-all duration-500 relative overflow-hidden depth-shadow">
+              <div className="glass-card-enhanced p-6 sm:p-8 lg:p-10 rounded-3xl group hover:scale-[1.05] transition-all duration-500 relative overflow-hidden depth-shadow card-3d animate-fade-in-scale opacity-0 stagger-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute -inset-1 bg-gradient-to-br from-[#00e676]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-[#00ffa3]/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 liquid-blob" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-[#00ffa3]/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 liquid-blob morph-border" style={{ animationDelay: '1s' }}></div>
                 <div className="relative z-10">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center mb-4 sm:mb-6 group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-500 group-hover:rotate-3 group-hover:scale-110 shimmer relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -323,10 +325,10 @@ function App() {
                 </div>
               </div>
 
-              <div className="glass-card p-6 sm:p-8 lg:p-10 rounded-3xl group hover:scale-[1.03] transition-all duration-500 relative overflow-hidden depth-shadow">
+              <div className="glass-card-enhanced p-6 sm:p-8 lg:p-10 rounded-3xl group hover:scale-[1.05] transition-all duration-500 relative overflow-hidden depth-shadow card-3d animate-fade-in-scale opacity-0 stagger-3">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute -inset-1 bg-gradient-to-br from-[#00e676]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-[#00f5d4]/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 liquid-blob" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-[#00f5d4]/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 liquid-blob morph-border" style={{ animationDelay: '2s' }}></div>
                 <div className="relative z-10">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center mb-4 sm:mb-6 group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-500 group-hover:rotate-3 group-hover:scale-110 shimmer relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -485,11 +487,11 @@ function App() {
           </div>
 
           <div className="container mx-auto max-w-4xl relative z-10">
-            <div className="glass-card p-6 sm:p-8 rounded-2xl text-center relative overflow-hidden">
+            <div className="glass-card-enhanced p-6 sm:p-8 rounded-2xl text-center relative overflow-hidden holographic animate-fade-in-scale opacity-0 stagger-2">
               <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/5 via-transparent to-[#00ffa3]/5"></div>
               <div className="relative z-10">
-                <div className="inline-block mb-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-[#00e676]/20 to-[#00ffa3]/20 flex items-center justify-center mx-auto">
+                <div className="inline-block mb-4 pulse-ring">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-[#00e676]/20 to-[#00ffa3]/20 flex items-center justify-center mx-auto neon-pulse">
                     <Bell className="w-6 h-6 sm:w-7 sm:h-7 text-[#00e676]" />
                   </div>
                 </div>
@@ -558,7 +560,7 @@ function App() {
               ].map((service, index) => (
                 <div
                   key={index}
-                  className="glass-card p-8 sm:p-10 rounded-2xl text-center hover:scale-[1.05] transition-all duration-500 group cursor-pointer feature-card-glow relative overflow-hidden"
+                  className={`glass-card-enhanced p-8 sm:p-10 rounded-2xl text-center hover:scale-[1.08] transition-all duration-500 group cursor-pointer feature-card-glow relative overflow-hidden card-3d animate-fade-in-up opacity-0 stagger-${index + 1}`}
                 >
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-[#00e676]/20 to-transparent rounded-full blur-3xl"></div>
@@ -574,22 +576,26 @@ function App() {
             </div>
 
             <div className="text-center">
-              <button className="glass border-2 border-[#00e676] hover:bg-[#00e676]/10 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 inline-flex items-center gap-3 group hover:scale-105 hover:shadow-xl">
+              <a href="#contact-form" className="glass border-2 border-[#00e676] hover:bg-[#00e676]/10 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 inline-flex items-center gap-3 group hover:scale-105 hover:shadow-xl">
                 Узнать больше
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </div>
           </div>
         </section>
 
         <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative">
           <div className="container mx-auto max-w-4xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-center tracking-tight">
+              Есть вопросы? <span className="gradient-text">Мы всегда на связи!</span>
+            </h2>
+
             <div className="space-y-4">
               <a
                 href="mailto:hello@24ttl.net"
-                className="glass-card px-6 py-5 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition-all duration-300 group"
+                className="glass-card-enhanced px-6 py-5 rounded-2xl flex items-center gap-4 hover:scale-[1.03] transition-all duration-300 group animate-fade-in-up opacity-0 stagger-1"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-300 shimmer">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-300 shimmer neon-pulse">
                   <Mail className="w-6 h-6 text-[#00e676]" />
                 </div>
                 <div className="flex-1">
@@ -600,9 +606,9 @@ function App() {
 
               <a
                 href="tel:+74951460098"
-                className="glass-card px-6 py-5 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition-all duration-300 group"
+                className="glass-card-enhanced px-6 py-5 rounded-2xl flex items-center gap-4 hover:scale-[1.03] transition-all duration-300 group animate-fade-in-up opacity-0 stagger-2"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-300 shimmer">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-300 shimmer neon-pulse">
                   <Phone className="w-6 h-6 text-[#00e676]" />
                 </div>
                 <div className="flex-1">
