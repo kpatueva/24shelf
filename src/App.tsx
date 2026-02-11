@@ -163,8 +163,7 @@ function App() {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="space-y-6">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-                  Запросите демонстрацию 24SHELF
-                  <span className="gradient-text block mt-2">сегодня!</span>
+                  Запросите демонстрацию 24SHELF <span className="gradient-text whitespace-nowrap">сегодня!</span>
                 </h2>
                 <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed font-light">
                   Оставьте заявку, и наш эксперт свяжется с вами.
@@ -519,7 +518,7 @@ function App() {
           </div>
         </section>
 
-        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/20 via-transparent to-[#00ffa3]/20 blur-3xl"></div>
           </div>
@@ -546,7 +545,7 @@ function App() {
                 </h2>
                 <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed font-light max-w-2xl mx-auto">
                   Используйте данные для эффективного управления ассортиментом и ценами.
-                  Запросите демонстрацию 24SHELF сегодня!
+                  Запросите демонстрацию 24SHELF <span className="gradient-text whitespace-nowrap">сегодня!</span>
                 </p>
                 <a href="#contact-form" className="btn-primary text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg shadow-2xl inline-flex items-center gap-2 group">
                   Оставить заявку
