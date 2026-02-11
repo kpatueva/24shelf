@@ -556,7 +556,7 @@ function App() {
           </div>
         </section>
 
-        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <section className="py-1 sm:py-2 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px]">
               <div className="absolute inset-0 rounded-full border border-[#00e676]/30"></div>
