@@ -365,19 +365,19 @@ function App() {
           </div>
 
           <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="glass-card p-8 sm:p-12 lg:p-16 rounded-3xl relative overflow-hidden">
+            <div className="glass-card p-6 sm:p-8 lg:p-10 rounded-3xl relative overflow-hidden">
               <div className="absolute inset-0 opacity-5 pointer-events-none">
                 <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-gradient-to-br from-[#00e676] to-transparent blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-gradient-to-tr from-[#00ffa3] to-transparent blur-3xl"></div>
               </div>
-              <div className="text-center mb-8 sm:mb-10 relative z-10">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 tracking-tight">
+              <div className="text-center mb-6 sm:mb-8 relative z-10">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3 tracking-tight">
                   Дорожная карта <span className="gradient-text">2026</span>
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-300 font-light">Планы расширения</p>
+                <p className="text-base sm:text-lg text-gray-300 font-light">Планы расширения</p>
               </div>
 
-              <div className="space-y-3 sm:space-y-4 relative z-10">
+              <div className="space-y-2.5 sm:space-y-3 relative z-10">
                 {[
                   "Полное покрытие Самоката по всей России (3000+ дарксторов)",
                   "Расширение на другие площадки: запуск мониторинга Яндекс Лавка и Ozon Fresh",
@@ -387,12 +387,12 @@ function App() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 sm:gap-5 glass p-5 sm:p-6 lg:p-7 rounded-2xl hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                    className="flex items-start gap-3 sm:gap-4 glass p-4 sm:p-5 rounded-xl hover:shadow-xl transition-all duration-300 group cursor-pointer"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#00e676] to-[#00c764] text-black font-bold flex items-center justify-center text-base sm:text-lg group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-[#00e676] to-[#00c764] text-black font-bold flex items-center justify-center text-sm sm:text-base group-hover:scale-110 transition-transform duration-300 shadow-lg">
                       {index + 1}
                     </div>
-                    <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-relaxed font-light pt-1.5">{item}</p>
+                    <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed font-light pt-1">{item}</p>
                   </div>
                 ))}
               </div>
@@ -518,7 +518,7 @@ function App() {
           </div>
         </section>
 
-        <section className="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <section className="py-4 sm:py-6 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/20 via-transparent to-[#00ffa3]/20 blur-3xl"></div>
           </div>
