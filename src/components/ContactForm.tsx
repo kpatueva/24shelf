@@ -63,55 +63,8 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact-form" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 relative scroll-mt-20">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="space-y-8">
-            <div>
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-[#00e676] mb-6 px-5 py-2.5 glass rounded-full glow-effect">
-                <div className="w-2 h-2 rounded-full bg-[#00e676] animate-pulse"></div>
-                Контакты
-              </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                Запросите демонстрацию 24SHELF
-                <span className="gradient-text block mt-2">сегодня!</span>
-              </h2>
-              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed font-light mb-8">
-                Оставьте заявку, и наш эксперт свяжется с вами.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <a
-                href="mailto:hello@24ttl.net"
-                className="glass-card px-6 py-5 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition-all duration-300 group"
-              >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-300 shimmer">
-                  <Mail className="w-6 h-6 text-[#00e676]" />
-                </div>
-                <div className="flex-1">
-                  <div className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">Email</div>
-                  <div className="text-lg font-semibold text-white">hello@24ttl.net</div>
-                </div>
-              </a>
-
-              <a
-                href="tel:+74951460098"
-                className="glass-card px-6 py-5 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition-all duration-300 group"
-              >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-300 shimmer">
-                  <PhoneIcon className="w-6 h-6 text-[#00e676]" />
-                </div>
-                <div className="flex-1">
-                  <div className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">Телефон</div>
-                  <div className="text-lg font-semibold text-white">+7 (495) 146-00-98</div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div className="glass-card p-6 sm:p-8 lg:p-10 rounded-3xl depth-shadow">
-            <form onSubmit={handleSubmit} className="space-y-6">
+    <div className="glass-card p-6 sm:p-8 rounded-3xl depth-shadow max-w-2xl mx-auto">
+      <form onSubmit={handleSubmit} className="space-y-5">
               <div className="space-y-2">
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-200">
                   Имя <span className="text-[#00e676]">*</span>
@@ -232,13 +185,10 @@ export default function ContactForm() {
                 )}
               </button>
 
-              <p className="text-xs text-center text-gray-500 leading-relaxed">
-                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-              </p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+        <p className="text-xs text-center text-gray-500 leading-relaxed">
+          Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+        </p>
+      </form>
+    </div>
   );
 }

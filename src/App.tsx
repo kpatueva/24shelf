@@ -10,7 +10,9 @@ import {
   ArrowRight,
   ChevronRight,
   Sparkles,
-  TrendingUp
+  TrendingUp,
+  Mail,
+  Phone
 } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 
@@ -105,6 +107,32 @@ function App() {
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-to-tl from-[#00ffa3] to-transparent blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
 
+          <div className="absolute top-20 right-[5%] opacity-[0.03] pointer-events-none hidden lg:block">
+            <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 20 150 L 60 100 L 100 110 L 140 60 L 180 80 L 220 40 L 260 50"
+                    fill="none" stroke="rgba(0,230,118,1)" strokeWidth="2"/>
+              <circle cx="20" cy="150" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="60" cy="100" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="100" cy="110" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="140" cy="60" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="180" cy="80" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="220" cy="40" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="260" cy="50" r="4" fill="rgba(0,230,118,1)"/>
+            </svg>
+          </div>
+
+          <div className="absolute bottom-20 left-[5%] opacity-[0.03] pointer-events-none hidden lg:block">
+            <svg width="350" height="180" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="100" width="25" height="60" fill="rgba(0,230,118,1)" opacity="0.8"/>
+              <rect x="60" y="80" width="25" height="80" fill="rgba(0,230,118,1)" opacity="0.8"/>
+              <rect x="100" y="60" width="25" height="100" fill="rgba(0,230,118,1)" opacity="0.8"/>
+              <rect x="140" y="90" width="25" height="70" fill="rgba(0,230,118,1)" opacity="0.8"/>
+              <rect x="180" y="50" width="25" height="110" fill="rgba(0,230,118,1)" opacity="0.8"/>
+              <rect x="220" y="70" width="25" height="90" fill="rgba(0,230,118,1)" opacity="0.8"/>
+              <rect x="260" y="85" width="25" height="75" fill="rgba(0,230,118,1)" opacity="0.8"/>
+            </svg>
+          </div>
+
           <div className="container mx-auto max-w-7xl relative z-10">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#00e676] mb-6 sm:mb-8 px-4 sm:px-5 py-2 glass rounded-full glow-effect">
@@ -112,7 +140,7 @@ function App() {
                 АНАЛИТИКА ЦИФРОВЫХ ПОЛОК ДЛЯ QUICK-COMMERCE
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 sm:mb-8 leading-[1.1] tracking-tight px-4">
                 <span className="text-balance">24SHELF – Первая платформа</span>
                 <br />
                 <span className="gradient-text text-balance inline-block mt-2">комплексной live-аналитики</span>
@@ -123,12 +151,23 @@ function App() {
               <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-10 sm:mb-12 leading-relaxed font-light px-4">
                 Полная прозрачность полки в quick-commerce: мониторинг дарксторов с реальными данными
               </p>
-
-              <a href="#contact-form" className="btn-primary text-black px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg shadow-2xl inline-flex items-center gap-3 group">
-                Оставить заявку
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
             </div>
+          </div>
+        </section>
+
+        <section id="contact-form" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative scroll-mt-20">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-tight">
+                Запросите демонстрацию 24SHELF
+                <span className="gradient-text block mt-1">сегодня!</span>
+              </h2>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-light">
+                Оставьте заявку, и наш эксперт свяжется с вами.
+              </p>
+            </div>
+
+            <ContactForm />
           </div>
         </section>
 
@@ -144,6 +183,30 @@ function App() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00e676] to-transparent blur-3xl animate-pulse"></div>
               <div className="absolute inset-20 rounded-full bg-gradient-to-tl from-[#00ffa3] to-transparent blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            </div>
+
+            <div className="absolute top-10 left-[10%] opacity-[0.025] pointer-events-none hidden xl:block">
+              <svg width="250" height="150" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="80" width="20" height="60" fill="rgba(0,230,118,1)" opacity="0.7" rx="2"/>
+                <rect x="40" y="60" width="20" height="80" fill="rgba(0,230,118,1)" opacity="0.7" rx="2"/>
+                <rect x="70" y="50" width="20" height="90" fill="rgba(0,230,118,1)" opacity="0.7" rx="2"/>
+                <rect x="100" y="70" width="20" height="70" fill="rgba(0,230,118,1)" opacity="0.7" rx="2"/>
+                <rect x="130" y="40" width="20" height="100" fill="rgba(0,230,118,1)" opacity="0.7" rx="2"/>
+              </svg>
+            </div>
+
+            <div className="absolute bottom-10 right-[10%] opacity-[0.025] pointer-events-none hidden xl:block">
+              <svg width="280" height="160" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 10 120 L 50 80 L 90 95 L 130 60 L 170 75 L 210 45 L 250 55"
+                      fill="none" stroke="rgba(0,230,118,1)" strokeWidth="2"/>
+                <circle cx="10" cy="120" r="3" fill="rgba(0,230,118,1)"/>
+                <circle cx="50" cy="80" r="3" fill="rgba(0,230,118,1)"/>
+                <circle cx="90" cy="95" r="3" fill="rgba(0,230,118,1)"/>
+                <circle cx="130" cy="60" r="3" fill="rgba(0,230,118,1)"/>
+                <circle cx="170" cy="75" r="3" fill="rgba(0,230,118,1)"/>
+                <circle cx="210" cy="45" r="3" fill="rgba(0,230,118,1)"/>
+                <circle cx="250" cy="55" r="3" fill="rgba(0,230,118,1)"/>
+              </svg>
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">
@@ -194,6 +257,32 @@ function App() {
           <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
             <div className="absolute top-20 left-20 w-96 h-96 rounded-full bg-gradient-to-br from-[#00e676] to-transparent blur-3xl"></div>
             <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-gradient-to-tl from-[#00ffa3] to-transparent blur-3xl"></div>
+          </div>
+
+          <div className="absolute top-20 right-[8%] opacity-[0.025] pointer-events-none hidden xl:block">
+            <svg width="320" height="200" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="120" width="30" height="70" fill="rgba(0,230,118,1)" opacity="0.6" rx="3"/>
+              <rect x="65" y="90" width="30" height="100" fill="rgba(0,230,118,1)" opacity="0.6" rx="3"/>
+              <rect x="110" y="70" width="30" height="120" fill="rgba(0,230,118,1)" opacity="0.6" rx="3"/>
+              <rect x="155" y="100" width="30" height="90" fill="rgba(0,230,118,1)" opacity="0.6" rx="3"/>
+              <rect x="200" y="60" width="30" height="130" fill="rgba(0,230,118,1)" opacity="0.6" rx="3"/>
+              <rect x="245" y="80" width="30" height="110" fill="rgba(0,230,118,1)" opacity="0.6" rx="3"/>
+            </svg>
+          </div>
+
+          <div className="absolute bottom-20 left-[8%] opacity-[0.025] pointer-events-none hidden xl:block">
+            <svg width="300" height="180" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 15 140 L 55 95 L 95 110 L 135 70 L 175 85 L 215 50 L 255 65 L 280 40"
+                    fill="none" stroke="rgba(0,230,118,1)" strokeWidth="2.5"/>
+              <circle cx="15" cy="140" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="55" cy="95" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="95" cy="110" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="135" cy="70" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="175" cy="85" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="215" cy="50" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="255" cy="65" r="4" fill="rgba(0,230,118,1)"/>
+              <circle cx="280" cy="40" r="4" fill="rgba(0,230,118,1)"/>
+            </svg>
           </div>
 
           <div className="container mx-auto max-w-7xl relative z-10">
@@ -314,6 +403,26 @@ function App() {
             <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#00e676] to-transparent"></div>
           </div>
 
+          <div className="absolute top-10 left-[5%] opacity-[0.02] pointer-events-none hidden lg:block">
+            <svg width="220" height="140" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="110" cy="70" r="50" fill="none" stroke="rgba(0,230,118,0.5)" strokeWidth="1.5" strokeDasharray="4,4"/>
+              <circle cx="110" cy="70" r="35" fill="none" stroke="rgba(0,230,118,0.6)" strokeWidth="1.5"/>
+              <circle cx="110" cy="70" r="20" fill="none" stroke="rgba(0,230,118,0.7)" strokeWidth="1.5"/>
+              <circle cx="110" cy="70" r="8" fill="rgba(0,230,118,0.6)"/>
+            </svg>
+          </div>
+
+          <div className="absolute bottom-10 right-[5%] opacity-[0.025] pointer-events-none hidden lg:block">
+            <svg width="260" height="150" xmlns="http://www.w3.org/2000/svg">
+              <rect x="15" y="80" width="22" height="60" fill="rgba(0,230,118,1)" opacity="0.5" rx="2"/>
+              <rect x="50" y="65" width="22" height="75" fill="rgba(0,230,118,1)" opacity="0.5" rx="2"/>
+              <rect x="85" y="55" width="22" height="85" fill="rgba(0,230,118,1)" opacity="0.5" rx="2"/>
+              <rect x="120" y="70" width="22" height="70" fill="rgba(0,230,118,1)" opacity="0.5" rx="2"/>
+              <rect x="155" y="50" width="22" height="90" fill="rgba(0,230,118,1)" opacity="0.5" rx="2"/>
+              <rect x="190" y="60" width="22" height="80" fill="rgba(0,230,118,1)" opacity="0.5" rx="2"/>
+            </svg>
+          </div>
+
           <div className="container mx-auto max-w-7xl relative z-10">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-10 sm:mb-12 text-center tracking-tight">
               Как это <span className="gradient-text">работает?</span>
@@ -367,26 +476,33 @@ function App() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/20 via-transparent to-[#00ffa3]/20 blur-3xl"></div>
           </div>
 
-          <div className="container mx-auto max-w-5xl relative z-10">
-            <div className="glass-card p-8 sm:p-10 lg:p-14 rounded-3xl text-center relative overflow-hidden">
+          <div className="absolute top-10 left-[8%] opacity-[0.025] pointer-events-none hidden lg:block">
+            <svg width="200" height="120" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="40" fill="none" stroke="rgba(0,230,118,0.6)" strokeWidth="1.5"/>
+              <circle cx="60" cy="60" r="25" fill="none" stroke="rgba(0,230,118,0.5)" strokeWidth="1.5"/>
+              <circle cx="60" cy="60" r="10" fill="rgba(0,230,118,0.4)"/>
+            </svg>
+          </div>
+
+          <div className="container mx-auto max-w-4xl relative z-10">
+            <div className="glass-card p-6 sm:p-8 rounded-2xl text-center relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/5 via-transparent to-[#00ffa3]/5"></div>
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-b from-[#00e676]/10 to-transparent blur-3xl"></div>
               <div className="relative z-10">
-                <div className="floating-animation inline-block mb-6">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-[#00e676]/20 to-[#00ffa3]/20 flex items-center justify-center mx-auto shadow-2xl">
-                    <Bell className="w-10 h-10 sm:w-12 sm:h-12 text-[#00e676]" />
+                <div className="inline-block mb-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-[#00e676]/20 to-[#00ffa3]/20 flex items-center justify-center mx-auto">
+                    <Bell className="w-6 h-6 sm:w-7 sm:h-7 text-[#00e676]" />
                   </div>
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tight text-balance">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 tracking-tight text-balance">
                   Не упустите возможность!
                 </h2>
-                <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-10 leading-relaxed font-light max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed font-light max-w-2xl mx-auto">
                   Используйте данные для эффективного управления ассортиментом и ценами.
                   Запросите демонстрацию 24SHELF сегодня!
                 </p>
-                <a href="#contact-form" className="btn-primary text-black px-10 sm:px-12 py-5 sm:py-6 rounded-xl font-bold text-lg sm:text-xl shadow-2xl inline-flex items-center gap-3 group">
+                <a href="#contact-form" className="btn-primary text-black px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg shadow-2xl inline-flex items-center gap-2 group">
                   Оставить заявку
-                  <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
             </div>
@@ -400,6 +516,29 @@ function App() {
               <div className="absolute inset-10 rounded-full border border-[#00e676]/20"></div>
               <div className="absolute inset-20 rounded-full border border-[#00e676]/10"></div>
             </div>
+          </div>
+
+          <div className="absolute top-20 right-[12%] opacity-[0.02] pointer-events-none hidden xl:block">
+            <svg width="280" height="170" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 20 130 L 65 85 L 110 100 L 155 65 L 200 80 L 245 50"
+                    fill="none" stroke="rgba(0,230,118,1)" strokeWidth="2.5"/>
+              <circle cx="20" cy="130" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="65" cy="85" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="110" cy="100" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="155" cy="65" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="200" cy="80" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="245" cy="50" r="5" fill="rgba(0,230,118,1)"/>
+            </svg>
+          </div>
+
+          <div className="absolute bottom-20 left-[12%] opacity-[0.025] pointer-events-none hidden xl:block">
+            <svg width="240" height="140" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="85" width="24" height="50" fill="rgba(0,230,118,1)" opacity="0.6" rx="2"/>
+              <rect x="58" y="70" width="24" height="65" fill="rgba(0,230,118,1)" opacity="0.6" rx="2"/>
+              <rect x="96" y="55" width="24" height="80" fill="rgba(0,230,118,1)" opacity="0.6" rx="2"/>
+              <rect x="134" y="75" width="24" height="60" fill="rgba(0,230,118,1)" opacity="0.6" rx="2"/>
+              <rect x="172" y="60" width="24" height="75" fill="rgba(0,230,118,1)" opacity="0.6" rx="2"/>
+            </svg>
           </div>
 
           <div className="container mx-auto max-w-7xl relative z-10">
@@ -443,7 +582,37 @@ function App() {
           </div>
         </section>
 
-        <ContactForm />
+        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 relative">
+          <div className="container mx-auto max-w-4xl">
+            <div className="space-y-4">
+              <a
+                href="mailto:hello@24ttl.net"
+                className="glass-card px-6 py-5 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-300 shimmer">
+                  <Mail className="w-6 h-6 text-[#00e676]" />
+                </div>
+                <div className="flex-1">
+                  <div className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">Email</div>
+                  <div className="text-lg font-semibold text-white">hello@24ttl.net</div>
+                </div>
+              </a>
+
+              <a
+                href="tel:+74951460098"
+                className="glass-card px-6 py-5 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-300 shimmer">
+                  <Phone className="w-6 h-6 text-[#00e676]" />
+                </div>
+                <div className="flex-1">
+                  <div className="text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">Телефон</div>
+                  <div className="text-lg font-semibold text-white">+7 (495) 146-00-98</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
 
         <footer className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 border-t border-white/5 relative">
           <div className="container mx-auto max-w-7xl">
