@@ -518,7 +518,7 @@ function App() {
           </div>
         </section>
 
-        <section className="py-4 sm:py-6 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <section className="py-1 sm:py-2 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.015] pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-br from-[#00e676]/20 via-transparent to-[#00ffa3]/20 blur-3xl"></div>
           </div>
