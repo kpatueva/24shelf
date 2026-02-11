@@ -12,7 +12,10 @@ import {
   Sparkles,
   TrendingUp,
   Mail,
-  Phone
+  Phone,
+  Link,
+  Database,
+  LineChart
 } from 'lucide-react';
 import ContactForm from './components/ContactForm';
 
@@ -425,6 +428,35 @@ function App() {
             </svg>
           </div>
 
+          <div className="absolute top-20 right-[8%] opacity-[0.02] pointer-events-none hidden xl:block">
+            <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 100 40 L 140 70 L 130 115 L 90 135 L 50 115 L 40 70 Z"
+                    fill="none" stroke="rgba(0,230,118,1)" strokeWidth="2" strokeDasharray="5,5"/>
+              <circle cx="100" cy="40" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="140" cy="70" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="130" cy="115" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="90" cy="135" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="50" cy="115" r="5" fill="rgba(0,230,118,1)"/>
+              <circle cx="40" cy="70" r="5" fill="rgba(0,230,118,1)"/>
+            </svg>
+          </div>
+
+          <div className="absolute bottom-20 left-[8%] opacity-[0.02] pointer-events-none hidden xl:block">
+            <svg width="180" height="180" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(90, 90)">
+                <circle r="60" fill="none" stroke="rgba(0,230,118,1)" strokeWidth="1.5" opacity="0.3"/>
+                <circle r="45" fill="none" stroke="rgba(0,230,118,1)" strokeWidth="1.5" opacity="0.4"/>
+                <circle r="30" fill="none" stroke="rgba(0,230,118,1)" strokeWidth="1.5" opacity="0.5"/>
+                <line x1="0" y1="-70" x2="0" y2="-25" stroke="rgba(0,230,118,1)" strokeWidth="2"/>
+                <line x1="60" y1="-35" x2="26" y2="-13" stroke="rgba(0,230,118,1)" strokeWidth="2"/>
+                <line x1="60" y1="35" x2="26" y2="13" stroke="rgba(0,230,118,1)" strokeWidth="2"/>
+                <line x1="0" y1="70" x2="0" y2="25" stroke="rgba(0,230,118,1)" strokeWidth="2"/>
+                <line x1="-60" y1="35" x2="-26" y2="13" stroke="rgba(0,230,118,1)" strokeWidth="2"/>
+                <line x1="-60" y1="-35" x2="-26" y2="-13" stroke="rgba(0,230,118,1)" strokeWidth="2"/>
+              </g>
+            </svg>
+          </div>
+
           <div className="container mx-auto max-w-7xl relative z-10">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-10 sm:mb-12 text-center tracking-tight">
               Как это <span className="gradient-text">работает?</span>
@@ -435,37 +467,51 @@ function App() {
                 {
                   step: "01",
                   title: "Подключение бренда",
-                  description: "Без необходимости в отправке списков SKU"
+                  description: "Без необходимости в отправке списков SKU",
+                  icon: <Link className="w-10 h-10 sm:w-12 sm:h-12" />
                 },
                 {
                   step: "02",
                   title: "Анализ данных",
-                  description: "Мы собираем данные по всем товарам в дарксторах"
+                  description: "Мы собираем данные по всем товарам в дарксторах",
+                  icon: <Database className="w-10 h-10 sm:w-12 sm:h-12" />
                 },
                 {
                   step: "03",
                   title: "AI-инсайты",
-                  description: "Система анализирует, находит отклонения и отправляет уведомления"
+                  description: "Система анализирует, находит отклонения и отправляет уведомления",
+                  icon: <Brain className="w-10 h-10 sm:w-12 sm:h-12" />
                 },
                 {
                   step: "04",
                   title: "Отчетность в реальном времени",
-                  description: "Вы получаете актуальные данные по ассортименту и ценам"
+                  description: "Вы получаете актуальные данные по ассортименту и ценам",
+                  icon: <LineChart className="w-10 h-10 sm:w-12 sm:h-12" />
                 }
               ].map((step, index) => (
                 <div key={index} className="relative group h-full">
-                  <div className="glass-card p-5 sm:p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 h-full flex flex-col relative overflow-hidden">
+                  <div className="glass-card-enhanced p-5 sm:p-6 rounded-2xl hover:scale-[1.05] transition-all duration-500 h-full flex flex-col relative overflow-hidden card-3d animate-fade-in-up opacity-0 depth-shadow"
+                       style={{ animationDelay: `${index * 100}ms` }}>
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[#00e676]/15 to-transparent blur-2xl"></div>
+                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br from-[#00e676]/20 to-transparent blur-2xl"></div>
                     </div>
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-[#00e676]/5 to-transparent rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 liquid-blob morph-border"></div>
                     <div className="relative z-10">
-                      <div className="text-5xl sm:text-6xl lg:text-7xl font-black gradient-text mb-4 sm:mb-6">{step.step}</div>
+                      <div className="mb-5 sm:mb-6 relative">
+                        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-[#00e676]/20 to-[#00e676]/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:from-[#00e676]/30 group-hover:to-[#00e676]/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 shimmer border border-[#00e676]/20 relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                          <div className="text-[#00e676] relative z-10 group-hover:scale-110 transition-transform duration-500">
+                            {step.icon}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-4xl sm:text-5xl lg:text-6xl font-black gradient-text mb-3 sm:mb-4">{step.step}</div>
                       <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-balance">{step.title}</h3>
                       <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-light">{step.description}</p>
                     </div>
                   </div>
                   {index < 3 && (
-                    <ChevronRight className="hidden lg:block absolute -right-5 top-1/2 -translate-y-1/2 text-[#00e676]/40 w-10 h-10 group-hover:text-[#00e676]/70 transition-colors" />
+                    <ChevronRight className="hidden lg:block absolute -right-5 top-1/2 -translate-y-1/2 text-[#00e676]/40 w-10 h-10 group-hover:text-[#00e676]/70 group-hover:scale-125 transition-all duration-300" />
                   )}
                 </div>
               ))}
